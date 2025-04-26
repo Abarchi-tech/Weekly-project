@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Louvre Sport</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-color: #f5f5f5;
+      }
+
+      /* Header */
+      header {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+        background: none;
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+      }
+
+      nav a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+      }
+
+      .header-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .header-buttons a {
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .header-buttons .transparent-btn {
+        border: 2px solid #fff;
+        color: #fff;
+        background-color: transparent;
+      }
+
+      .header-buttons .solid-btn {
+        background-color: #fff;
+        color: #000;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: url("tennis 2.jpg") no-repeat center/cover;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 50px;
+        color: #fff;
+        position: relative;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        max-width: 600px;
+      }
+
+      .hero-buttons {
+        margin-top: 30px;
+      }
+
+      .hero-buttons a {
+        margin-right: 15px;
+        padding: 10px 20px;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      /* Intro Section */
+      .intro {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+        background-color: whitesmoke;
+      }
+      .intro-button {
+        display: flex;
+        gap: 15px;
+      }
+      .intro-buttons a {
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .intro-buttons .transparent-btn {
+        border: 2px solid #fff;
+        color: #000;
+        background-color: transparent;
+        font-size: x-small;
+      }
+      .intro-buttons .solid-btn {
+        background-color: #000;
+        color: #fff;
+        font-size: small;
+      }
+      .intro-text {
+        max-width: 500px;
+      }
+      .intro-text h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: lighter;
+      }
+      .intro-grid {
+        display: grid;
+        gap: 20px;
+      }
+      /* .intro-images {
+        display: flex;
+        gap: 20px; */
+      /* } */
+      .intro-images img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .intro-images p {
+        padding: 10px;
+        font-size: 12px;
+        display: flex;
+      }
+
+      /* About Section */
+      .about {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+        background-color: #fff;
+      }
+
+      .about-text {
+        max-width: 500px;
+      }
+
+      .about-text h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .about-text p {
+        font-size: 16px;
+        color: #666;
+      }
+
+      .about-images {
+        display: flex;
+        gap: 20px;
+      }
+
+      .about-images img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      /* Facilities Section */
+      .facilities {
+        padding: 50px;
+        background-color: #f5f5f5;
+      }
+
+      .facilities h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      .facility-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .facility-card {
+        background-color: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .facility-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .facility-card p {
+        padding: 15px;
+        font-size: 16px;
+      }
+
+      /* Testimonial Section */
+      .testimonial {
+        padding: 50px;
+        background-color: #fff;
+        text-align: center;
+      }
+
+      .testimonial h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .testimonial-card {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+      }
+
+      .testimonial-card p {
+        font-size: 18px;
+        font-style: italic;
+        margin-bottom: 20px;
+      }
+
+      .testimonial-card span {
+        font-size: 16px;
+        color: #666;
+      }
+
+      /* Newsletter Section */
+      .newsletter {
+        padding: 50px;
+        background: url("a.webp") no-repeat center/cover;
+        color: #fff;
+        text-align: center;
+      }
+
+      .newsletter h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .newsletter input {
+        padding: 10px;
+        width: 300px;
+        border: none;
+        border-radius: 20px;
+        margin-right: 10px;
+      }
+
+      .newsletter button {
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #000;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+
+      /* Footer */
+      footer {
+        padding: 50px;
+        background-color: #e6f0fa;
+        color: #000;
+      }
+
+      .footer-main {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .footer-left h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        max-width: 300px;
+      }
+
+      .footer-left p {
+        font-size: 16px;
+        color: #000;
+      }
+
+      .footer-right {
+        display: flex;
+        gap: 50px;
+      }
+
+      .footer-column h4 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #000;
+      }
+
+      .footer-column a {
+        display: block;
+        color: #000;
+        text-decoration: none;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #ccc;
+        padding-top: 20px;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+      }
+
+      .footer-bottom a {
+        color: #000;
+        text-decoration: none;
+        font-size: 14px;
+      }
+      .footer-bottom .copyright {
+        text-align: right;
+        align-items: end;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#">About Us</a>
+        <a href="#">Facilities</a>
+        <a href="#">Members</a>
+      </nav>
+      <div class="logo">LOUVRE SPORT</div>
+      <div class="header-buttons">
+        <a href="#" class="transparent-btn">Login</a>
+        <a href="#" class="solid-btn">Book Now</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>YOUR PLAY, YOUR WAY - MODERN SPORTS FACILITIES FOR EVERY PASSION</h1>
+      <div class="hero-buttons">
+        <a href="#">Competition</a>
+        <a href="#">Training</a>
+        <a href="#">Friendly Match</a>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="intro-text">
+        <div class="intro-buttons">
+          <a href="#" class="transparent-btn">AboutLouvre</a>
+        </div>
+        <h2>
+          At Louvre sport center, we're passionate about providing a top-notch
+          environment for athletes of all levels.
+        </h2>
+        <div class="intro-buttons">
+          <a href="#" class="solid-btn">Get Inasmuch</a>
+        </div>
+      </div>
+      <div class="intro-grid">
+        <div class="intro-images">
+          <img src="basketball player.jpg" alt="Basketball" />
+          <p>Explore a wide range of top-tier facilities</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-text">
+        <h2>Experience the Best in Courts, Fields, and More</h2>
+        <p>
+          At our sport center, we’re passionate about providing an outstanding
+          environment for athletes of all levels, offering a wide range of
+          facilities including individual or group training sessions, and more.
+        </p>
+        <a href="#" class="book-now">Book a Court</a>
+      </div>
+      <div class="about-images">
+        <img src="a.webp" alt="Basketball" />
+        <img src="tennis.jpg" alt="Futsal" />
+      </div>
+    </section>
+
+    <section class="facilities">
+      <h2>Explore Our Facilities</h2>
+      <div class="facility-grid">
+        <div class="facility-card">
+          <img src="Tennis 2.jpg" alt="Tennis" />
+          <p>Tennis Courts</p>
+        </div>
+        <div class="facility-card">
+          <img src="swimming pool.jpg" alt="Swimming" />
+          <p>Swimming Pool</p>
+        </div>
+        <div class="facility-card">
+          <img src="golf.jpg" alt="golf" />
+          <p>Golf</p>
+        </div>
+        <div class="facility-card">
+          <img src="basketball.jpg" alt="Basketball" />
+          <p>Basketball Courts</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial">
+      <h2>What They Say</h2>
+      <div class="testimonial-card">
+        <p>
+          “I’ve been a member at Louvre for over a year now, and it’s hands down
+          the best sports center I’ve ever been to!”
+        </p>
+        <span>Riley J. - Professional Athlete</span>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <h2>
+        Get the Latest Updates, Special Offers, and Exclusive Event Invitations!
+      </h2>
+      <input type="email" placeholder="Your email address" />
+      <button>Subscribe</button>
+    </section>
+
+    <footer>
+      <div class="footer-main">
+        <div class="footer-left">
+          <h3>
+            Your Play, Your Way - Modern Sports Facilities for Every Passion
+          </h3>
+          <p>Louvre Sport</p>
+        </div>
+        <div class="footer-right">
+          <div class="footer-column">
+            <h4>Facilities</h4>
+            <a href="#">Tennis Courts</a>
+            <a href="#">Football Field</a>
+            <a href="#">Swimming Pool</a>
+            <a href="#">Multi-Sport Hall</a>
+            <a href="#">Louvre Recreation Zone</a>
+          </div>
+          <div class="footer-column">
+            <h4>About</h4>
+            <a href="#">Our Mission</a>
+            <a href="#">Community</a>
+            <a href="#">Leadership</a>
+            <a href="#">Values</a>
+          </div>
+          <div class="footer-column">
+            <h4>Social</h4>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="#" class="privacy">Privacy Policy Term.</a>
+        <a href="#" class="copyright"
+          >All rights reserved &copy; Louvre 2024.</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
