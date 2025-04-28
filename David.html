@@ -118,7 +118,7 @@
         gap: 15px;
       }
       .intro-buttons a {
-        padding: 10px 20px;
+        padding: 10px 10px;
         border-radius: 20px;
         text-decoration: none;
         font-weight: bold;
@@ -144,13 +144,50 @@
         font-weight: lighter;
       }
       .intro-grid {
-        display: grid;
+        display: flex;
         gap: 20px;
       }
-      /* .intro-images {
+      .intro-images {
         display: flex;
-        gap: 20px; */
-      /* } */
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+      }
+      .intro-image .large-image {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+      .intro-images.small-image {
+        width: 250px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .intro-image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        position: relative;
+      }
+      .intro-image p {
+        padding: 10px;
+        font-size: 12px;
+        display: flex;
+      }
+      .intro-image {
+        position: relative;
+      }
+
+      .intro-image .text-overlay {
+        position: absolute;
+        top: 65%;
+        left: 1px;
+        transform: translate(-45% -50%);
+        color: #fff;
+      }
       .intro-images img {
         width: 100%;
         height: 200px;
@@ -161,6 +198,7 @@
         padding: 10px;
         font-size: 12px;
         display: flex;
+        text-align: center;
       }
 
       /* About Section */
@@ -266,8 +304,8 @@
       /* Newsletter Section */
       .newsletter {
         padding: 50px;
-        background: url("a.webp") no-repeat center/cover;
-        color: #fff;
+        /* background: url("a.") no-repeat center/cover; */
+        color: black;
         text-align: center;
       }
 
@@ -392,8 +430,22 @@
         </div>
       </div>
       <div class="intro-grid">
+        <div class="intro-image">
+          <img
+            class="large-image"
+            src="basketball player.jpg"
+            alt="Basketball"
+          />
+          <p class="text-overlay">
+            Explore a wide range of top-tier facilities
+          </p>
+        </div>
         <div class="intro-images">
-          <img src="basketball player.jpg" alt="Basketball" />
+          <img
+            class="small-image"
+            src="basketball player.jpg"
+            alt="Basketball"
+          />
           <p>Explore a wide range of top-tier facilities</p>
         </div>
       </div>
@@ -420,19 +472,19 @@
       <div class="facility-grid">
         <div class="facility-card">
           <img src="Tennis 2.jpg" alt="Tennis" />
-          <p>Tennis Courts</p>
+          <p>Proffessionally Designed Courts for Every Skill Level</p>
         </div>
         <div class="facility-card">
           <img src="swimming pool.jpg" alt="Swimming" />
-          <p>Swimming Pool</p>
+          <p>Dive in, Relax and Enjoy our Pool</p>
         </div>
         <div class="facility-card">
           <img src="golf.jpg" alt="golf" />
-          <p>Golf</p>
+          <p>Enjoy the Fresh Air and Beauiful Surrounding</p>
         </div>
         <div class="facility-card">
           <img src="basketball.jpg" alt="Basketball" />
-          <p>Basketball Courts</p>
+          <p>Full-Sized Courts for Play and Competiion</p>
         </div>
       </div>
     </section>
