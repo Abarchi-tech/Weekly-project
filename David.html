@@ -270,6 +270,18 @@
         font-size: 16px;
       }
 
+      .facility-card {
+        position: relative;
+      }
+
+      .facility-card .text-overlay {
+        position: absolute;
+        top: 55%;
+        left: 1px;
+        transform: translate(-45% -50%);
+        color: #fff;
+      }
+
       /* Testimonial Section */
       .testimonial {
         padding: 50px;
@@ -472,19 +484,23 @@
       <div class="facility-grid">
         <div class="facility-card">
           <img src="Tennis 2.jpg" alt="Tennis" />
-          <p>Proffessionally Designed Courts for Every Skill Level</p>
+          <p class="text-overlay">
+            Professionally Designed Courts for Every Skill Level
+          </p>
         </div>
         <div class="facility-card">
           <img src="swimming pool.jpg" alt="Swimming" />
-          <p>Dive in, Relax and Enjoy our Pool</p>
+          <p class="text-overlay">Dive in, Relax and Enjoy our Pool</p>
         </div>
         <div class="facility-card">
           <img src="golf.jpg" alt="golf" />
-          <p>Enjoy the Fresh Air and Beauiful Surrounding</p>
+          <p class="text-overlay">
+            Enjoy the Fresh Air and Beauiful Surrounding
+          </p>
         </div>
         <div class="facility-card">
           <img src="basketball.jpg" alt="Basketball" />
-          <p>Full-Sized Courts for Play and Competiion</p>
+          <p class="text-overlay">Full-Sized Courts for Play and Competiion</p>
         </div>
       </div>
     </section>
