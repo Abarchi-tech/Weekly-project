@@ -286,32 +286,104 @@
       .testimonial {
         padding: 50px;
         background-color: #fff;
-        text-align: center;
+        /* text-align: center; */
+        display: flex;
       }
 
-      .testimonial h2 {
+      .testimonial-text {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+      }
+
+      .testimonial-text a {
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      /* .testimonial-text h2 {
         font-size: 24px;
         margin-bottom: 20px;
-      }
+        text-align: end;
+      } */
+      /* 
+      .testimonial-grid {
+        display: flex; */
+      /* grid-template-columns: repeat(4, 1fr); */
+      /* gap: 40px;
+        justify-content: left;
+      } */
 
-      .testimonial-card {
+      /* .testimonial-image { */
+      /* background-color: #fff; */
+      /* display: flex;
+        gap: 20px;
+        border-radius: 20px;
+        overflow: hidden;
+        text-align: center;
+        max-width: 200px;
+        padding: 20px;
+      } */
+
+      /* .testimonial-image img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+      } */
+
+      /* .testimonial-card {
         max-width: 600px;
         margin: 0 auto;
         padding: 20px;
         border: 1px solid #ddd;
         border-radius: 10px;
-      }
+      } */
 
-      .testimonial-card p {
-        font-size: 18px;
+      /* .testimonial-image p { */
+      /* font-size: 16px;
         font-style: italic;
-        margin-bottom: 20px;
+        margin: 0;
+        text-align: left;
+        display: flex;
+        flex: ; */
+      /* font-size: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-weight: lighter;
+        max-width: 1200px;
+        margin: 0 auto;
+      } */
+      /* text-align: center; */
+      /* margin-bottom: 20px;
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between; */
+      /* }
+
+      .testimonial-button{
+        display: flex;
+        gap: 15px;
+      }
+      .testimonial-button a{ */
+      /* padding: 5px 10px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: lighter;
+      } */
+      /* .testimonial-button .solid-btn{
+        background-color: #000;
+        color: #fff;
+        font-size: small;
       }
 
       .testimonial-card span {
-        font-size: 16px;
+        font-size: 14px;
         color: #666;
-      }
+        margin-top: 10px;
+      } */
 
       /* Newsletter Section */
       .newsletter {
@@ -505,14 +577,41 @@
       </div>
     </section>
 
-    <section class="testimonial">
+    <!-- <section class="testimonial">
       <h2>What They Say</h2>
-      <div class="testimonial-card">
+      <div class="testimonial-grid">
+        <div class="testimonial-image">
+          <img src="coach 1.jpg" alt="coach" />
+          <p>
+            “I’ve been a member at Louvre for over a year now, and it’s hands
+            down the best sports center I’ve ever been to!”
+          </p>
+          <span>Riley J. - Professional Athlete</span>
+        </div>
+      </div> -->
+    <!-- <div class="testimonial-card">
+        <img src="coach 1.jpg" alt="coach" />
         <p>
           “I’ve been a member at Louvre for over a year now, and it’s hands down
           the best sports center I’ve ever been to!”
         </p>
         <span>Riley J. - Professional Athlete</span>
+      </div> -->
+    <!-- </section> -->
+    <!--  -->
+
+    <section class="testimonial" style="justify-content: space-between">
+      <button class="testimonial-text" style="background-color: #000; color: #f5f5f5; border-radius: 50%;">
+        <!-- <div class="testimonial-button"> -->
+          <a>Get Started</a>
+        <a href="#" class="solid-btn" >WhatTheySayAboutUs</a>
+        </button>
+        <div class="header" style="font-family: 'Courier New', Courier, monospace; font-size: x-large;" >Our customer-satisfaction</div>
+        <!-- <div class="testimonial-grid">
+          <div class="testimonial-image">
+            <img src="coach 1.jpg" alt="" />
+          </div>-->
+        </div> 
       </div>
     </section>
 
