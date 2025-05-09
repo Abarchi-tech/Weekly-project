@@ -300,6 +300,33 @@
         text-decoration: none;
         font-size: 14px;
       }
+      .testimonial-buttons {
+        display: flex;
+        gap: 15px;
+      }
+      .testimonial-buttons a {
+        padding: 10px 10px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .testimonial-buttons .transparent-btn {
+        border: 1px solid #000;
+        color: #000;
+        background-color: transparent;
+        font-size: x-small;
+      }
+      .testimonial-buttons .solid-btn {
+        background-color: #000;
+        color: #fff;
+        font-size: x-small;
+      }
+      .testimonial-header {
+        display: flex;
+        /* align-items: end; */
+        justify-content: space-between;
+        gap: 20px;
+      }
 
       /* .testimonial-text h2 {
         font-size: 24px;
@@ -362,22 +389,6 @@
         align-items: center;
         justify-content: space-between; */
       /* }
-
-      .testimonial-button{
-        display: flex;
-        gap: 15px;
-      }
-      .testimonial-button a{ */
-      /* padding: 5px 10px;
-        border-radius: 20px;
-        text-decoration: none;
-        font-weight: lighter;
-      } */
-      /* .testimonial-button .solid-btn{
-        background-color: #000;
-        color: #fff;
-        font-size: small;
-      }
 
       .testimonial-card span {
         font-size: 14px;
@@ -600,18 +611,21 @@
     <!-- </section> -->
     <!--  -->
 
-    <section class="testimonial" style="justify-content: space-between">
-      <button class="testimonial-text" style="background-color: #000; color: #f5f5f5; border-radius: 50%;">
-        <!-- <div class="testimonial-button"> -->
-          <a>Get Started</a>
-        <a href="#" class="solid-btn" >WhatTheySayAboutUs</a>
-        </button>
-        <div class="header" style="font-family: 'Courier New', Courier, monospace; font-size: x-large;" >Our customer-satisfaction</div>
-        <!-- <div class="testimonial-grid">
-          <div class="testimonial-image">
-            <img src="coach 1.jpg" alt="" />
-          </div>-->
-        </div> 
+    <section class="testimonial">
+      <div class="testimonial-text">
+        <div class="testimonial-buttons">
+          <a href="#" class="transparent-btn">Get Started</a>
+          <a href="#" class="solid-btn">WhatTheySayAboutUs</a>
+        </div>
+        <div
+          class="testimonial-header"
+          style="
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: x-large;
+          "
+        >
+          Our customer-satisfaction
+        </div>
       </div>
     </section>
 
